@@ -38,10 +38,14 @@ function filterDomains() {
                 domain_url_el.innerText = search_value.slice(0, -domain.length);
                 domain_el.classList.remove("hide", "partial");
                 count += 1;
-            } else if (search_value.length > domain.length && search_value.slice(0, -1).endsWith(domain)) {
+            } else if (search_value.length > domain.length + 1 && search_value.slice(0, -1).endsWith(domain)) {
                 domain_url_el.innerText = search_value.slice(0, -(1 + domain.length));
                 domain_el.classList.remove("hide");
                 domain_el.classList.add("partial")
+                count += 1;
+            } else if (search_value.length <= domain.length && domain.includes(search_value)) {
+                domain_url_el.innerText = "";
+                domain_el.classList.remove("hide", "partial");
                 count += 1;
             } else {
                 domain_el.classList.add("hide");
