@@ -38,7 +38,10 @@ input {
     }
 }
 
-#domains {
+#domains, #ideas {
+    float: left;
+    width: fit-content;
+
     p {
         margin: 0;
 
@@ -48,7 +51,7 @@ input {
         }
 
         &.partial span {
-            color: tomato;
+            color: #ca3318;
         }
 
         &.hide {
@@ -75,5 +78,25 @@ input {
     &.no-results::after {
         content: "sorry, no results :(";
         color: #777;
+    }
+}
+
+#ideas {
+    border-radius: 1rem;
+    border: 2px solid #333;
+    padding: 0rem 1rem 1rem 1rem;
+
+    &.hide {
+        display: none;
+    }
+
+    & > span {
+        color: #777;
+        font-size: 1rem;
+        
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }

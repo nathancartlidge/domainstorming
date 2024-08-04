@@ -1,0 +1,2 @@
+'google-10000-english-no-swears.txt' sourced from https://github.com/first20hours/google-10000-english, licenced under
+a slightly complex but nonetheless permissive licence for noncommercial use

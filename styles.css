@@ -32,35 +32,65 @@ input:active,
 input:focus {
   outline: 2px solid #386f9e;
 }
-#domains p {
+#domains,
+#ideas {
+  float: left;
+  width: fit-content;
+}
+#domains p,
+#ideas p {
   margin: 0;
 }
-#domains p span {
+#domains p span,
+#ideas p span {
   color: coral;
   float: left;
 }
-#domains p.partial span {
-  color: tomato;
+#domains p.partial span,
+#ideas p.partial span {
+  color: #ca3318;
 }
-#domains p.hide {
+#domains p.hide,
+#ideas p.hide {
   display: none;
 }
-#domains p a {
+#domains p a,
+#ideas p a {
   color: #777;
   text-decoration: none;
   margin-left: 1ch;
 }
-#domains p a:hover {
+#domains p a:hover,
+#ideas p a:hover {
   text-decoration: underline;
 }
-#domains.show-all p {
+#domains.show-all p,
+#ideas.show-all p {
   display: block;
 }
-#domains.show-all p span {
+#domains.show-all p span,
+#ideas.show-all p span {
   display: none;
 }
-#domains.no-results::after {
+#domains.no-results::after,
+#ideas.no-results::after {
   content: "sorry, no results :(";
   color: #777;
+}
+#ideas {
+  border-radius: 1rem;
+  border: 2px solid #333;
+  padding: 0rem 1rem 1rem 1rem;
+}
+#ideas.hide {
+  display: none;
+}
+#ideas > span {
+  color: #777;
+  font-size: 1rem;
+}
+#ideas > span a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
