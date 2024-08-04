@@ -12,14 +12,16 @@ body {
 }
 
 h2 {
+    margin-top: 0;
     margin-bottom: 1rem;
+    text-decoration: 4px solid underline;
 }
 
 header {
     position: sticky;
     top: 0;
     width: calc(100% - 2rem);
-    background: #dcdad77f;
+    background: #dcdad7cc;
     padding: 1rem 0;
 }
 
@@ -39,20 +41,16 @@ input {
 }
 
 #domains, #ideas {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     width: fit-content;
 
     p {
         margin: 0;
 
-        span {
-            color: coral;
-            float: left;
-        }
-
-        &.partial span {
-            color: #ca3318;
-        }
+        span { color: coral; }
+        span:first-child { float: left; }
+        &.partial span { color: #ca3318; }
 
         &.hide {
             display: none;
